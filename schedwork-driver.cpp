@@ -17,14 +17,22 @@ void printSchedule(const DailySchedule& sched);
 int main()
 {
     // Replace the matrix below with your test case
-    AvailabilityMatrix avail = { 
-        {1, 1, 1, 1},
-        {1, 0, 1, 0},
-        {1, 1, 0, 1},
-        {1, 0, 0, 1}
+    // AvailabilityMatrix avail = { 
+    //     {1, 1, 1, 1},
+    //     {1, 0, 1, 0},
+    //     {1, 1, 0, 1},
+    //     {1, 0, 0, 1}
+    // };
+
+		AvailabilityMatrix avail = { 
+				{1},
+				{1},
+        {1}
     };
+
     DailySchedule sched;
-    bool solutionFound = schedule(avail, 2, 2, sched);
+    // bool solutionFound = schedule(avail, 2, 2, sched);
+		bool solutionFound = schedule(avail, 1, 3, sched);
     if(solutionFound)
     {
         printSchedule(sched);
